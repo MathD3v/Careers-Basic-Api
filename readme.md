@@ -97,7 +97,7 @@ Durante o desenvolvimento, o CORS está configurado para aceitar todas as origen
 
 ```python
 CORS_ALLOW_ALL_ORIGINS = True
-
+```
 ## Limitações Atuais
 
 - Sem sistema de autenticação
