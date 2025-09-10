@@ -1,0 +1,128 @@
+# Django Careers API
+
+API simples desenvolvida com Django e Django REST Framework para gerenciar posts de carreira. A API oferece funcionalidades completas de CRUD (Create, Read, Update, Delete) para posts.
+
+## Funcionalidades
+
+- Criar posts - `POST /careers/`
+- Listar posts - `GET /careers/`
+- Atualizar posts - `PATCH /careers/{id}/`
+- Deletar posts - `DELETE /careers/{id}/`
+
+## Pré-requisitos
+
+- Python 3.8+
+- pip (gerenciador de pacotes do Python)
+- Git (opcional, para clonar o repositório)
+
+## Instalação
+
+1. Clone o repositório:
+
+```bash
+git clone https://seurepositorio.com/backend.git
+cd backend
+Crie um ambiente virtual:
+
+Linux/macOS:
+
+bash
+Copiar código
+python3 -m venv venv
+source venv/bin/activate
+Windows (CMD):
+
+cmd
+Copiar código
+python -m venv venv
+venv\Scripts\activate
+Windows (PowerShell):
+
+powershell
+Copiar código
+python -m venv venv
+venv\Scripts\Activate.ps1
+Instale as dependências:
+
+bash
+Copiar código
+pip install django djangorestframework django-cors-headers
+Configure o banco de dados:
+
+bash
+Copiar código
+python manage.py makemigrations
+python manage.py migrate
+Execute o servidor:
+
+bash
+Copiar código
+python manage.py runserver
+O servidor estará disponível em: http://127.0.0.1:8000
+
+Endpoints da API
+Criar um post:
+
+bash
+Copiar código
+curl -X POST http://127.0.0.1:8000/careers/ \
+  -H "Content-Type: application/json" \
+  -d '{"username":"joao","title":"Meu título","content":"Conteúdo"}'
+Listar todos os posts:
+
+bash
+Copiar código
+curl http://127.0.0.1:8000/careers/
+Atualizar um post específico:
+
+bash
+Copiar código
+curl -X PATCH http://127.0.0.1:8000/careers/1/ \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Novo título","content":"Novo conteúdo"}'
+Deletar um post:
+
+bash
+Copiar código
+curl -X DELETE http://127.0.0.1:8000/careers/1/
+Estrutura do Projeto
+markdown
+Copiar código
+backend/
+├── manage.py
+├── requirements.txt
+├── careers/
+│   ├── models.py
+│   ├── views.py
+│   ├── serializers.py
+│   └── urls.py
+└── project/
+    ├── settings.py
+    └── urls.py
+Tecnologias Utilizadas
+Django - Framework web Python
+
+Django REST Framework - Toolkit para construção de APIs REST
+
+Django CORS Headers - Gerenciamento de CORS
+
+Configurações Importantes
+CORS
+Durante o desenvolvimento, o CORS está configurado para aceitar todas as origens:
+
+python
+Copiar código
+CORS_ALLOW_ALL_ORIGINS = True
+Atenção: Em produção, configure adequadamente as origens permitidas.
+
+Banco de Dados
+O projeto usa SQLite por padrão para desenvolvimento. Para produção, considere usar PostgreSQL ou MySQL.
+
+Limitações Atuais
+Sem sistema de autenticação
+
+Sem controle de acesso/permissões
+
+Sem validações avançadas
+
+Sem paginação
