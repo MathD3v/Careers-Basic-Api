@@ -42,7 +42,7 @@ API simples desenvolvida com Django e Django REST Framework para gerenciar posts
 
 3. **Instale as dependências**
     ```bash
-    pip install django djangorestframework django-cors-headers
+    pip install -r requirements.txt
     ```
 
 4. **Configure o banco de dados**
