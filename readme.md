@@ -20,7 +20,6 @@ API simples desenvolvida com Django e Django REST Framework para gerenciar posts
 1. **Clone o repositório**
     ```bash
     git clone https://github.com/MathD3v/CodeLeep.git
-    cd backend
     ```
 
 2. **Crie um ambiente virtual**
